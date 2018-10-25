@@ -1,4 +1,4 @@
-var test = magicInc(0.8, 'inc');
+var test = magicInc(0.1, 'dec');
 
 function magicInc(number, str) {
 	var n = number;
@@ -14,7 +14,7 @@ function magicInc(number, str) {
 
 	switch (str) {
 		case 'inc':
-			if (n < -0.1) {
+			if (n <= -0.1) {
 				n += 0.1;
 				n = n.toFixed(1);
 			} else if (n >= 0.1 && n < 1.0) {
@@ -29,7 +29,7 @@ function magicInc(number, str) {
 			console.log(n);
 			break;
 		case 'dec':
-			if (n > 0.1 && n < 1) {
+			if (n >= 0.1 && n < 1) {
 				n -= 0.1;
 
 			} else if (n >= 1 && n <= 9) {
@@ -46,7 +46,7 @@ function magicInc(number, str) {
 				n -= 10;
 			} else if (n >= 10) {
 				let str = square(n);
-				n = (parseInt(n / str, 10) + 1) * str;
+				n = (parseInt(n / str, 10) - 1) * str;
 			}
 			console.log(n);
 			break;
