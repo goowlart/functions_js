@@ -1,8 +1,7 @@
 var test = magicInc(0.5,'inc');
 
-function magicInc(valeur,srt) {
-	var n = valeur;
-    var inc = srt;
+function magicInc(number,str) {
+	var n = number;
 	var f = n.toString().length * 100 / 100; //size of my variable n 
 
 	function positive() {
@@ -21,7 +20,7 @@ function magicInc(valeur,srt) {
 		return str
 	}
 
-	switch (srt) {
+	switch (str) {
 		case 'inc':
 			if (n < -0.1 ) {
 				n += 0.1;
