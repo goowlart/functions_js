@@ -1,4 +1,4 @@
-var test = magicInc(0.1, 'dec');
+var test = magicInc(0.76, 'inc');
 
 function magicInc(number, str) {
 	var n = number;
@@ -17,9 +17,11 @@ function magicInc(number, str) {
 			if (n <= -0.1) {
 				n += 0.1;
 				n = n.toFixed(1);
+	
 			} else if (n >= 0.1 && n < 1.0) {
+				console.log(n)
 				n += 0.1;
-				n = n.toFixed(1);
+				console.log(n)
 			} else if (n > 0 && n <= 9) {
 				n += 1;
 			} else if (n >= 10) {
