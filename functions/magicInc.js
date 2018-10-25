@@ -1,4 +1,4 @@
-var test = magicInc(0.76, 'inc');
+var test = magicInc(0.76, 'in');
 
 function magicInc(number, str) {
 	var n = number;
